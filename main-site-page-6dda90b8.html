@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于雷速 · 信息卡片页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #f9f6f0;
+            color: #2c2c2c;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.7;
+            padding: 2rem 1rem;
+        }
+        .page {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        /* 主视觉区 */
+        .hero {
+            background: #e7e0d4;
+            padding: 3rem 2.5rem;
+            border-radius: 28px;
+            margin-bottom: 2.4rem;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.03);
+        }
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            color: #1f1b16;
+            margin-bottom: 0.8rem;
+        }
+        .hero p {
+            font-size: 1.15rem;
+            color: #4a443d;
+            max-width: 580px;
+        }
+
+        /* 信息卡片网格 */
+        .card-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.8rem;
+            margin-bottom: 2.8rem;
+        }
+        @media (max-width: 600px) {
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+
+        .card {
+            background: #ffffffef;
+            border-radius: 24px;
+            padding: 1.8rem 1.6rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02), 0 8px 20px rgba(0,0,0,0.02);
+            transition: transform 0.1s ease, box-shadow 0.15s ease;
+        }
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+        }
+        .card h3 {
+            font-weight: 500;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #1f1b16;
+        }
+        .card .sub {
+            display: inline-block;
+            background: #ede8df;
+            border-radius: 40px;
+            padding: 0.2rem 1rem;
+            font-size: 0.8rem;
+            font-weight: 450;
+            letter-spacing: 0.02em;
+            color: #5b5246;
+            margin-bottom: 0.8rem;
+        }
+        .card p {
+            color: #3b362f;
+            margin-top: 0.1rem;
+        }
+
+        /* 引用块 / 提示框 */
+        .notebox {
+            background: #eae4d9;
+            border-left: 5px solid #9b8c7a;
+            padding: 1.6rem 2rem;
+            border-radius: 14px;
+            margin: 2rem 0 2.4rem 0;
+            font-size: 0.98rem;
+            color: #2f2a24;
+        }
+        .notebox strong {
+            font-weight: 550;
+            color: #1e1a16;
+        }
+
+        /* 自然链接段落 */
+        .link-paragraph {
+            background: #ffffffde;
+            padding: 1.6rem 2rem;
+            border-radius: 20px;
+            margin-bottom: 2.4rem;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.02);
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+        .link-paragraph a {
+            color: #5a4f41;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-thickness: 1px;
+            text-decoration-color: #bbb0a0;
+            font-weight: 500;
+        }
+        .link-paragraph a:hover {
+            color: #231f1a;
+            text-decoration-color: #231f1a;
+        }
+
+        /* FAQ 摘要 */
+        .faq-mini {
+            margin: 3rem 0 1.2rem;
+        }
+        .faq-mini h4 {
+            font-weight: 500;
+            font-size: 1.1rem;
+            color: #1f1b16;
+            margin: 1.2rem 0 0.2rem;
+        }
+        .faq-mini p {
+            color: #4b443d;
+            margin-bottom: 0.6rem;
+        }
+        .faq-mini hr {
+            border: none;
+            border-top: 1px solid #dbd2c6;
+            margin: 0.6rem 0;
+        }
+
+        footer {
+            margin-top: 3rem;
+            font-size: 0.85rem;
+            color: #777067;
+            border-top: 1px solid #ded6c9;
+            padding-top: 1.6rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- 主视觉 -->
+    <div class="hero">
+        <h1>雷速 · 信息通路</h1>
+        <p>围绕关键词背后的语义网络，从信息结构到使用场景，做一次系统化的轻梳理。</p>
+    </div>
+
+    <!-- 信息卡片网格：用途 + 适合人群 -->
+    <div class="card-grid">
+        <div class="card">
+            <span class="sub">USE CASE</span>
+            <h3>用途卡片</h3>
+            <p>用于内容聚合、索引构建、主题分类与快速浏览。适合需要将碎片信息归纳为可复用结构的人——不论研究、写作还是日常决策，都能减少认知负荷。</p>
+        </div>
+        <div class="card">
+            <span class="sub">AUDIENCE</span>
+            <h3>适合人群</h3>
+            <p>知识工作者、信息整理爱好者、内容策展人、持续阅读者。如果你经常面对大量条目却缺少组织框架，这套卡片逻辑值得试一下。</p>
+        </div>
+    </div>
+
+    <!-- 提示框 / 引用块 -->
+    <div class="notebox">
+        <strong>提示：</strong> 卡片只是起点，真正价值在于后续的连接与复用。建议每张卡片只聚焦一个核心概念，并保持格式的一致，方便跨主题合并。
+    </div>
+
+    <!-- 自然链接段落（句子中嵌入 a 标签，可见文本为“雷速”） -->
+    <div class="link-paragraph">
+        关键词最初来自一个内容测试节点，后来逐渐延伸为对信息组织方式的观察。<a href="https://main-site-leisu.com">雷速</a> 所代表的路径，是尝试将零散要点转化为模块化卡片，再通过关系链接形成可浏览的微小知识网。这种思路在个人 wiki 和数字花园领域有不少实践者，并不追求完整，而是鼓励渐进、迭代。
+    </div>
+
+    <!-- FAQ 摘要 -->
+    <div class="faq-mini">
+        <h4>FAQ 摘要 · 卡片式信息常见疑问</h4>
+        <p><strong>卡片之间如何建立关联？</strong> 可使用标签、双向链接或简单的索引页，不必一次性完成。</p>
+        <hr>
+        <p><strong>需要特殊软件吗？</strong> 不需要。纯文本、Markdown、HTML 都可以承载卡片逻辑。重点在结构而非工具。</p>
+        <hr>
+        <p><strong>适合团队协作吗？</strong> 若约定好标题与摘要格式，卡片法很容易同步；也适合作为个人思考的“第二大脑”。</p>
+    </div>
+
+    <!-- 额外精炼段落：承接上文，偏知识型 -->
+    <div style="background: #f3eee7; border-radius: 20px; padding: 1.6rem 1.8rem; margin-top: 1.6rem; color: #2a2622;">
+        <p style="margin-bottom: 0.2rem;">从卡片到网络，中间需要持续的修剪和重组。每个卡片都是一次浓缩，而链接则让浓缩重新获得上下文。如果你对这种信息实践感兴趣，不妨从一张索引卡片开始，逐渐扩展你的主题地图。</p>
+    </div>
+
+    <footer>
+        基于信息卡片 · 内容方向为知识型梳理 · 页面结构随主题变化
+    </footer>
+</div>
+</body>
+</html>
